@@ -1,0 +1,150 @@
+.header {
+    position: relative;
+    &::after {
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 100%;
+        background-color: $yellow;
+        bottom: -2px; 
+    }
+    &__navbar {
+        display: flex;
+        flex-direction: column;
+        padding-top: 8px;
+        @media (min-width: 993px) {
+            padding: 12px 0;
+        }
+
+        &-logo {
+            align-self: center;
+        }
+        &-buttons {
+            margin-top: 12px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            @media (min-width: 993px) {
+                position: absolute;
+                margin: 0;
+                padding: 0;
+                top: 6px;
+                right: calc((100% - 970px) / 2);
+            }
+    
+            &-btn {
+                color: $yellow;
+                font-size: 14px;
+                line-height: 16px;
+                border: 1px solid $yellow;
+                border-radius: 25px;
+                padding: 9px 30px;
+    
+                &:hover {
+                    background-color: $yellow_hover;
+                    border: 1px solid $yellow_hover;
+                    color: $black;
+                    transition: 0.3s;
+                }
+                &.registration {
+                    background-color: $yellow;
+                    color: $black;
+                    @media (min-width: 993px) {
+                        margin-left: 16px;
+                    }
+                    &:hover {
+                        background-color: $yellow_hover;
+                        border: 1px solid $yellow_hover;
+                        color: $black;
+                        transition: 0.3s;
+                    }
+                }
+                &.download {
+                    display: flex;
+                    padding: 7px 30px;
+                    align-items: center;
+                    &:hover .svg {
+                        fill: $hover_svg;
+                    }
+
+                }
+                &-text {
+                    margin: 0 10px;
+                }
+            }
+        }
+        &-buttons2 {
+            margin: 12px 0 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @media (min-width: 993px) {
+                position: absolute;
+                top: 6px;
+                margin: 0;
+            }
+        }
+    &-burger {
+        position: relative;
+        width: 38px;
+        height: 22px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        @media (min-width: 993px) {
+            display: none;
+        }
+
+        &-line {
+            position: absolute;
+            width: 38px;
+            height: 2px;
+            background-color: $yellow;
+            border-radius: 1px;
+            left: 0; 
+            &::before {
+                position: absolute;
+                content: "";
+                height: 2px;
+                width: 38px;
+                background-color: $yellow;
+                border-radius: 1px;
+                top: 8px;
+                left: 0;
+            }
+            &::after {
+                position: absolute;
+                content: "";
+                height: 2px;
+                width: 38px;
+                background-color: $yellow;
+                border-radius: 1px;
+                bottom: 8px;
+                left: 0;
+            }
+            &.active {
+                background: none;
+    
+            &::before {
+              transform: rotate(-45deg);
+              top: 0px;
+              width: 38px;
+              transition: all 0.4s ease 0s;
+            }
+    
+            &::after {
+              transform: rotate(45deg);
+              bottom: 0px;
+              width: 38px;
+              transition: all 0.4s ease 0s;
+            }
+            }
+        }
+    }
+}
+}
+
+
+
+
+

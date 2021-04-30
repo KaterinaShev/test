@@ -1,0 +1,62 @@
+@import "./variables";
+@import "./general";
+@import "./header";
+@import "./main";
+@import "./footer";
+
+.vector {
+
+    position: fixed;
+    bottom: 327px;
+    right: 4px;
+    z-index: 9999;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    border-radius: 2px;
+    display: none;
+    &.active {
+        display: block;
+        transition: 0.3s;
+        animation-name: button;
+        animation-duration: 2s;
+        @media (min-width: 993px) {
+            animation-name: buttonDesctop;
+            animation-duration: 2s; 
+        }
+    }
+    @media (min-width: 993px) {
+        bottom: 98px;
+        right: 100px;
+    }
+}
+
+@keyframes button {
+    from { 
+        bottom: 0;
+        transform: scale(0.5) 
+    }
+    to { 
+        bottom: 327px;
+        transform: scale(1);
+        @media (min-width: 993px) {
+            bottom: 98px;
+        }
+        
+    }
+}
+
+@keyframes buttonDesctop {
+    from { 
+        bottom: 0;
+        transform: scale(0.5) 
+    }
+    to { 
+        bottom: 98px;
+        transform: scale(1);
+    }
+}
+
+// .svg:hover {
+//     fill: black;
+// }

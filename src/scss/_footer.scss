@@ -1,0 +1,29 @@
+.footer {
+    margin-top: 50px;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @media (min-width: 993px) {
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: flex-end;
+          
+        }
+        &-item {
+            padding: 15px 10px;
+            @media (min-width: 993px) {
+                padding: 0;
+                width: auto;
+                justify-content: space-between;
+            }
+        }
+    }
+    &__subscribe {
+        color: $footer;
+        font-size: 12px;
+        line-height: 24px;
+        text-align: center;
+        padding: 60px 0 24px;
+    }
+}
