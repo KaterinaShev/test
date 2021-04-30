@@ -38,11 +38,7 @@
     }
     to { 
         bottom: 327px;
-        transform: scale(1);
-        @media (min-width: 993px) {
-            bottom: 98px;
-        }
-        
+        transform: scale(1); 
     }
 }
 

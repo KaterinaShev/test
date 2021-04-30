@@ -33,6 +33,11 @@ a {
 	padding: 0;
 	margin: 0;
 }
+button,
+button:active,
+button:focus {
+	outline: none;
+}
 body {
 	margin: 0;
 }
